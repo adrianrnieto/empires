@@ -1,11 +1,11 @@
-CREATE TABLE Suborigin (
+CREATE TABLE SubOrigin (
     Id INT,
     OriginId INT NOT NULL,
     Name VARCHAR(50) NOT NULL,
     DateCreated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT PK_Suborigin PRIMARY KEY (Id),
-    CONSTRAINT FK_Suborigin_OriginId FOREIGN KEY (OriginId) REFERENCES Origin(Id)
+    CONSTRAINT PK_SubOrigin PRIMARY KEY (Id),
+    CONSTRAINT FK_SubOrigin_OriginId FOREIGN KEY (OriginId) REFERENCES Origin(Id)
 );
 
 INSERT INTO SubOrigin (Id, OriginId, Name) VALUES (1, 5, 'Springvale');
